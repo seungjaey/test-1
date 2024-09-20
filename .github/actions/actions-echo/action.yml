@@ -1,0 +1,14 @@
+name: composite - echo
+description: echo
+
+inputs:
+  TEST_INPUT:
+    description: 'test'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: echo
+      shell: bash
+      run: echo "hello ${{ inputs.TEST_INPUT }}"
